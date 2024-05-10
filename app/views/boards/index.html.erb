@@ -38,6 +38,11 @@
       <a href="/boards/<%= a_board.id %>">
         <%= a_board.name %>
       </a>
+      <div>
+        <%= User.where({:id => a_board.user_id}).at(0).email %>
+
+      </div>
+      <hr>
     </li>
   <% end %>
 </ul>
